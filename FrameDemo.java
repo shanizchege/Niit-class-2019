@@ -7,9 +7,11 @@ JFrame obj;
 	obj=new JFrame();
 	obj.setTitle("NIIT songs");
 	obj.setVisible(true);
-obj.setSize(300,300);
-	}
+	obj.setSize(300,300);
 
+	obj.setLayout(new FlowLayout());
+	}
+          
 	public static void main(String[]args){
 	FrameDemo obj= new FrameDemo();
 
