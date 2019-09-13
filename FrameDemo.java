@@ -1,38 +1,30 @@
 import javax.swing.*;
-import javax.awt.*;
+import java.awt.*;
+
 public class FrameDemo{
-JFrame obj;
+public static void main(String[]args){
+JFrame obj= new JFrame("NIIT SONGS");
 
-	public FrameDemo(){
-	obj=new JFrame();
-	obj.setTitle("NIIT songs");
-	obj.setVisible(true);
-	public class JFrameSize{
+Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+obj.setSize(screenSize.width,screenSize.height);
+obj.setSize(screenSize.width/2,screenSize.height/2);
+obj.setVisible(true);
 
-private void makeFullSize(JFrame obj){
-   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-   obj.setSize(screenSize.width,screenSize.height);
 
-}
+obj.setLayout(new FlowLayout());
+ 
+obj.setResizable(false);
+
+
+obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
    
-private void makeHalfScreenSize(Jframe obj){
-   Dimention screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-   obj.setSize(screenSize.width/2,screenSize.height/2);
-
-}
-  }
-
-	obj.setLayout(new FlowLayout());
-	}
-          
-	public static void main(String[]args){
-	FrameDemo obj= new FrameDemo();
        
         JPanel jp = new JPanel();
         
         JButton jb1 = new JButton("Button 1");
         JButton jb2 = new JButton("Button 2");
-        
+    
         obj.add(jb1);
         obj.add(jb2);
        
@@ -40,7 +32,6 @@ private void makeHalfScreenSize(Jframe obj){
         obj.pack();
       
         
-
-	}
+}
 
 }
