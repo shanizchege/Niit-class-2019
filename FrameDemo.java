@@ -7,7 +7,7 @@ JFrame obj= new JFrame("NIIT SONGS");
 
 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 obj.setSize(screenSize.width,screenSize.height);
-obj.setSize(screenSize.width/2,screenSize.height/2);
+//obj.setSize(screenSize.width/2,screenSize.height/2);
 obj.setVisible(true);
 
 
@@ -29,7 +29,7 @@ obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         obj.add(jb2);
        
         obj.add(jp);
-        obj.pack();
+     //   obj.pack();
       
         
 }
