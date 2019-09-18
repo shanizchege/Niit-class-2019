@@ -15,8 +15,14 @@ obj.setLayout(new FlowLayout());
  
 obj.setResizable(false);
 
-
-obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+{                                   
+    int confirmed = JOptionPane.showConfirmDialog(null, "DO YOU WANNA EXIT?","EXIT",JOptionPane.OK_CANCEL_OPTION);
+    if(confirmed == JOptionPane.OK_OPTION)
+    {
+        dispose();
+    }
+else {
+     setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
    
        
@@ -30,8 +36,26 @@ obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
        
         obj.add(jp);
      //   obj.pack();
-      
-        
+	 
 }
+}
+{
+        JPanel jp = new JPanel();
+		
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 
+		tabbedPane.addTab("HOME", makePanel("This is your Home page"));
+		tabbedPane.addTab("TRENDING", makePanel("This is your Treanding page"));
+		tabbedPane.addTab("MY MUSIC",makePanel("This is your Music"));
+
+		frame.getContentPane().add(tabbedPane);
+
+}
+JScrollPane jp = new JScrollPane(
+  panel,
+  JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
+  JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+  
+  tabbedPane.add(jp);
+)
 }
